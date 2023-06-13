@@ -4,7 +4,8 @@
   "description": "- College Model\r ```\r { name: { mandatory, unique, example iith}, fullName: {mandatory, example `Indian Institute of Technology, Hyderabad`}, logoLink: {mandatory}, isDeleted: {boolean, default: false} }\r ```\r - Intern Model\r ```\r { name: {mandatory}, email: {mandatory, valid email, unique}, mobile: {mandatory, valid mobile number, unique}, collegeId: {ObjectId, ref to college model, isDeleted: {boolean, default: false}}}\r ```",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,12 @@
   },
   "homepage": "https://github.com/Sanket-Munishwar/Oper-to-Intern#readme",
   "dependencies": {
+    "email-validator": "^2.0.4",
     "express": "^4.18.2",
     "mongoose": "^7.2.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.22",
+    "valid-url": "^1.0.9",
+    "validate-phone-number-node-js": "^0.0.1"
   }
 }

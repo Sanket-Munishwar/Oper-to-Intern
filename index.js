@@ -7,10 +7,10 @@ const app = express()
 
 mongoose.set('strictQuery', true)
 
-app.use(JSON.express())
+app.use(express.json())
 app.use(multer().any())
 
-mongoose.connect('',{
+mongoose.connect('mongodb+srv://sanketmunishwar7:q5WEY4lK4vMAzwbJ@cluster0.0jenlvx.mongodb.net/open-to-intern?retryWrites=true&w=majority',{
     useNewUrlParser: true
 })
 .then(()=> console.log("MongoDB is connected ..."))
