@@ -8,7 +8,7 @@ let nameRegex = /^[a-z A-Z]{1,20}$/
 
 
 const createIntern = async function(req, res){
-    res.setHeader("Access-Control-Allow-Origin" , "*")
+    res.setHeader("Access-Control-Allow-Origin" , "*")   //the server indicates that it is willing to respond to requests coming from any origin, regardless of the domain from which the request originated
     try {
         data = req.body
         let { name, mobile, email, collegeName} = data
@@ -86,7 +86,7 @@ const getdata = async (req, res) => {
 
             collegeData._doc.interns = x;
 
-            res.status(200).send({ status: true, data: collegeData });
+            res.status(201).send({ status: true, data: collegeData });
         } else {
             return res.status(400).send({ status: false, message: "Invalid Request." });
         }
